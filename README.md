@@ -8,7 +8,7 @@ This is an ice cream parlor delivery website built using the MERN stack (MongoDB
 - Payment Integration: Secure online payments are handled through Stripe. Additionally, there is an option for Cash on Delivery (COD).
 - Order Tracking: Customers can view their order history and track the status of their current orders.
 ## Technologies Used
-- Frontend: React, Redux, CSS (for styling)
+- Frontend: React, CSS (for styling)
 - Backend: Node.js, Express.js
 - Database: MongoDB
 - Payment: Stripe API
