@@ -13,8 +13,12 @@ const app=express()
 const port= process.env.PORT || 4000
 
 //middleware
+app.use(cors({
+    origin: ["https://ice-cream-parlor-backend.vercel.app/"],
+    methods: ["POST","GET"],
+    credentials: true
+}))
 app.use(express.json())
-app.use(cors())
 
 //db connection
 connectDB()
