@@ -12,7 +12,7 @@ const Add = ({url}) => {
     name:"",
     description:"",
     price:"",
-    category:"Shakes"
+    category:"Cookies"
   })
 
   //const fileInputRef = useRef(null);
@@ -37,7 +37,7 @@ const Add = ({url}) => {
         name:"",
         description:"",
         price:"",
-        category:"Shakes"
+        category:"Cookies"
       })
       setImage(false)
       toast.success(response.data.message) //notification
@@ -69,15 +69,14 @@ const Add = ({url}) => {
             <div className="add-category flex-col">
                 <p>Product Category</p>
                 <select onChange={onChangeHandler} value={data.category} name="category">
-                    <option value="Shakes">Shakes</option>
-                    <option value="Sundaes">Sundaes</option>
-                    <option value="Scoops">Scoops</option>
-                    <option value="Brownies">Brownies</option>
+                    <option value="Cookies">Cookies</option>
+                    <option value="Assorted Boxes">Assorted Boxes</option>
+                    <option value="SoftServe">Soft Serve</option>
                 </select>
             </div>
             <div className="add-price flex-col">
                 <p>Product Price</p>
-                <input onChange={onChangeHandler} value={data.price} type="Number" name='price' placeholder='Rs. 200' />
+                <input onChange={onChangeHandler} value={data.price} type="Number" name='price' placeholder='Rs. 310' />
             </div>
         </div>
         <button type='submit' className='add-btn'>Add</button>

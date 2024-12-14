@@ -23,7 +23,7 @@
     padding: 10px;
     border: 1px solid #c5c5c5;
     border-radius: 4px;
-    outline-color: #B432A7;
+    outline-color: #de0f3f;
 }
 
 .place-order-left .multi-fields {
@@ -67,6 +67,6 @@
 }
 
 .payment-method label:hover {
-    color: #B432A7;
+    color: #de0f3f;
     cursor: pointer;
 }

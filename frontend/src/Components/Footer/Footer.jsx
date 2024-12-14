@@ -8,8 +8,8 @@ const Footer = () => {
     <div className='footer' id='footer'>
       <div className="footer-content">
         <div className="footer-content-left">
-            <img src={assets.logo} alt="" />
-            <p>Discover a world of flavors all in one place. <br /> Our menu features a wide variety of ice cream options to suit every taste. From timeless favorites to innovative new creations, you’re sure to find something to delight your taste buds. Browse our selection and find the perfect treat to satisfy your cravings.</p>
+            <img src={assets.logowhite} alt="" />
+            <p>Started as a small project in a MCS dorm room, Krumble's first location featured just a countertop display, serving as our humble beginning.</p>
             <div className="footer-social-icons">
                 <img src={assets.facebook_icon} alt="" />
                 <img src={assets.twitter_icon} alt="" />
@@ -29,12 +29,12 @@ const Footer = () => {
             <h2>Get in Touch</h2>
             <ul>
                 <li>00289200101</li>
-                <li>contact@scoopdogg.com</li>
+                <li>contact@krumble.com</li>
             </ul>
         </div>
       </div>
       <hr />
-      <p className="footer-copyright">&copy; 2024 Maryam Inam <br />All Rights Reserved</p>
+      <p className="footer-copyright">&copy; 2024 P4L <br />All Rights Reserved</p>
     </div>
   )
 }

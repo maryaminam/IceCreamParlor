@@ -5,6 +5,7 @@
 }
 
 .explore-menu h1{
+    padding-top: 30px;
     color: #262626;
     font-weight: 500;
 }
@@ -14,18 +15,14 @@
     justify-content: space-between;
     align-items: center;
     gap: 25px;
-    text-align: center;
-    margin: 20px 0px;
-    
+    text-align: right;
+    margin: 5px 0px; 
 }
-
-
 
 .explore-menu-list img{
     flex: 1 1 100%;
     max-width: 150%;
 }
-
 
 .explore-menu-list-item{
     width: 7.5vw;
@@ -36,8 +33,8 @@
 }
 
 .explore-menu-list-item p{
-    margin-top: 10px;
-    color: #747474;
+    margin-top: 5px;
+    color: #504d4d;
     font-size: max(1.4vw,16px);
     cursor: pointer;
 }
@@ -48,11 +45,18 @@
     border: none;
 }
 .explore-menu-list-item .active{
-    border: 2px solid #B432A7;
+    border: 2px solid #de0f3f;
     padding: 2px;
 }
 
 @media (max-width:750px) {
+    .explore-menu h1{
+        font-size: 20px;
+    }
+    .explore-menu-list{
+        text-align: center;
+    }
+    
     .explore-menu-list img{
         flex: 1 1 100%;
         max-width: 100%;

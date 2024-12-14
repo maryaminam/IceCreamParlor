@@ -1,11 +1,11 @@
 import basket_icon from './basket_icon.png'
 import logo from './logo.png'
+import logowhite from './krumble_white.png'
 import header_img from './header_img.png'
 import search_icon from './search_icon.png'
 import menu_1 from './menu_1.png'
 import menu_2 from './menu_2.png'
 import menu_3 from './menu_3.png'
-import menu_4 from './menu_4.png'
 
 import food_1 from './food_1.png'
 import food_2 from './food_2.png'
@@ -16,6 +16,7 @@ import food_6 from './food_6.png'
 import food_7 from './food_7.png'
 import food_8 from './food_8.png'
 import food_9 from './food_9.png'
+import food_10 from './food_10.png'
 
 import add_icon_white from './add_icon_white.png'
 import add_icon_green from './add_icon_green.png'
@@ -35,6 +36,7 @@ import parcel_icon from './parcel_icon.png'
 
 export const assets = {
     logo,
+    logowhite,
     basket_icon,
     header_img,
     search_icon,
@@ -57,86 +59,90 @@ export const assets = {
 
 export const menu_list = [
     {
-        menu_name: "Shakes",
+        menu_name: "Cookies",
         menu_image: menu_1
     },
     {
-        menu_name: "Sundaes",
+        menu_name: "Assorted Boxes",
         menu_image: menu_2
     },
     {
-        menu_name: "Scoops",
+        menu_name: "SoftServe",
         menu_image: menu_3
-    },
-    {
-        menu_name: "Brownies",
-        menu_image: menu_4
-    }]
+    }
+]
 
 export const food_list = [
     {
         _id: "1",
-        name: "Chocolate Shake",
+        name: "Classic Chocolate Chip",
         image: food_1,
-        price: 250,
+        price: 310,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Shakes"
+        category: "Cookies"
     },
     {
         _id: "2",
-        name: "Vanilla Shake",
+        name: "Chocolate Chip Walnut",
         image: food_2,
-        price: 250,
+        price: 310,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Shakes"
+        category: "Cookies"
     }, {
         _id: "3",
-        name: "Strawberry Shake",
+        name: "Double Chocolate",
         image: food_3,
-        price: 300,
+        price: 310,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Shakes"
+        category: "Cookies"
     }, {
         _id: "4",
-        name: "Tropical Sundae",
+        name: "Chocolate Filled Hazelnut",
         image: food_4,
-        price: 550,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Sundaes"
-    }, {
-        _id: "5",
-        name: "Berry Sundae",
-        image: food_5,
-        price: 550,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Sundaes"
-    }, {
-        _id: "6",
-        name: "Strawberry",
-        image: food_6,
-        price: 150,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Scoops"
-    }, {
-        _id: "7",
-        name: "Dark Chocolate",
-        image: food_7,
-        price: 200,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Scoops"
-    }, {
-        _id: "8",
-        name: "BubbleGum",
-        image: food_8,
-        price: 200,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Scoops"
-    }, {
-        _id: "9",
-        name: "Fudge Brownie",
-        image: food_9,
         price: 350,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Brownies"
+        category: "Cookies"
+    }, {
+        _id: "5",
+        name: "NYC Brownie",
+        image: food_5,
+        price: 310,
+        description: "Food provides essential nutrients for overall health and well-being",
+        category: "Cookies"
+    }, {
+        _id: "6",
+        name: "Peanut Butter",
+        image: food_6,
+        price: 310,
+        description: "Food provides essential nutrients for overall health and well-being",
+        category: "Cookies"
+    }, {
+        _id: "7",
+        name: "Red Velvet Cream Cheese",
+        image: food_7,
+        price: 350,
+        description: "Food provides essential nutrients for overall health and well-being",
+        category: "Cookies"
+    }, {
+        _id: "8",
+        name: "Signature Assortment",
+        image: food_8,
+        price: 1950,
+        description: "Food provides essential nutrients for overall health and well-being",
+        category: "Assorted Boxes"
+    }, {
+        _id: "9",
+        name: "Chocolate Lovers' Assortment",
+        image: food_9,
+        price: 1950,
+        description: "Food provides essential nutrients for overall health and well-being",
+        category: "Assorted Boxes"
+    },{
+        _id: "10",
+        name: "Vanilla",
+        image: food_10,
+        price: 250,
+        description: "Food provides essential nutrients for overall health and well-being",
+        category: "SoftServe"
     }
 ]

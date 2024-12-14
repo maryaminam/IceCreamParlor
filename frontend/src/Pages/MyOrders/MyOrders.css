@@ -17,7 +17,7 @@
     font-size: 20px;
     padding: 10px 20px;
     color: #454545;
-    border: 1px solid #B432A7;   
+    border: 1px solid #de0f3f;   
 }
 
 .my-orders-order img{
@@ -25,7 +25,7 @@
 }
 
 .my-orders-order p span{
-    color: #B432A7;
+    color: #de0f3f;
 }
 
 .my-orders-order p b{

@@ -3,7 +3,7 @@
     grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
     align-items: start;
     gap: 30px;
-    border: 1px solid  #B432A7;
+    border: 2px solid #de0f3f;
     padding: 20px;
     margin: 30px 0px;
     font-size: 16px;
@@ -25,7 +25,7 @@
 
 .order-item select{
     background-color: #ffe8e4;
-    border: 1px solid  #B432A7;
+    border: 2px solid  #de0f3f;
     width: max(10vw, 120px);
     max-width: 100%; /* Ensure it does not exceed the container */
     padding: 10px;

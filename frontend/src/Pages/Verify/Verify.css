@@ -8,7 +8,7 @@
     height: 100px;
     place-self: center;
     border: 5px solid #bdbdbd;
-    border-top-color: #B432A7;
+    border-top-color:#de0f3f;
     border-radius: 50%;
     animation: rotate 1s infinite;
 }

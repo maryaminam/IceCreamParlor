@@ -2,7 +2,7 @@
     width: 70%;
     margin-left: max(5vw,25px);
     margin-top: 50px;
-    color: #a6a6a6;
+    color: black;
     font-size: 16px;
 }
 
@@ -38,7 +38,7 @@
     width: 120px;
     border: none;
     padding: 10px;
-    background-color: #B432A7;
+    background-color:#de0f3f;
     color: white;
     cursor: pointer;
 }

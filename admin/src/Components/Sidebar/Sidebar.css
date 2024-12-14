@@ -28,7 +28,7 @@
 }
 .sidebar-option.active{
     background-color: #fff0ed;
-    border-color: #B432A7;
+    border-color: #de0f3f;
 }
 
 @media (max-width:900px) {

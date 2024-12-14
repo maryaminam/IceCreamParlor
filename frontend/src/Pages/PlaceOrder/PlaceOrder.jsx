@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const PlaceOrder = () => {
-  const { getTotalCartAmount, token, food_list, cartItems, setcartItems, url } = useContext(StoreContext);
+  const { getTotalCartAmount, token, food_list, cartItems,setcartItems, url } = useContext(StoreContext);
   const [data, setData] = useState({
     firstName: '',
     lastName: '',
@@ -18,7 +18,7 @@ const PlaceOrder = () => {
     phone: ''
   });
 
-  const [paymentMethod, setPaymentMethod] = useState('cod'); // Default payment method is COD
+  const [paymentMethod, setPaymentMethod] = useState('stripe'); // Default payment method is Stripe
 
   const onChangeHandler = (event) => {
     const name = event.target.name;
@@ -49,12 +49,16 @@ const PlaceOrder = () => {
 
     let response = await axios.post(url + '/api/order/place', orderData, { headers: { token } });
     if (response.data.success) {
-      alert("Order placed successfully with Cash on Delivery");
-      // Reset cart items after successful order
-      setcartItems({});
-      navigate('/myorders'); // Navigate to a success page for COD
+      if (paymentMethod === 'stripe') {
+        const { session_url } = response.data;
+        window.location.replace(session_url);
+      } else if (paymentMethod === 'cod') {
+        alert("Order placed successfully with Cash on Delivery");
+        setcartItems({});
+        navigate('/myorders'); // Navigate to a success page for COD
+      }
     } else {
-      alert("Error placing order. Please try again.");
+      alert("error");
     }
   };
 
@@ -66,7 +70,7 @@ const PlaceOrder = () => {
     } else if (getTotalCartAmount() === 0) {
       navigate('/cart');
     }
-  }, [token, getTotalCartAmount, navigate]);
+  }, []);
 
   return (
     <form onSubmit={placeOrder} className='place-order'>
@@ -114,6 +118,15 @@ const PlaceOrder = () => {
           <label>
             <input
               type="radio"
+              value="stripe"
+              checked={paymentMethod === 'stripe'}
+              onChange={onPaymentMethodChange}
+            />
+            Stripe
+          </label>
+          <label>
+            <input
+              type="radio"
               value="cod"
               checked={paymentMethod === 'cod'}
               onChange={onPaymentMethodChange}
@@ -122,7 +135,7 @@ const PlaceOrder = () => {
           </label>
         </div>
 
-        <button type='submit' className='btn'>Place Order</button>
+        <button type='submit' className='btn'>Proceed to Payment</button>
       </div>
     </form>
   );
