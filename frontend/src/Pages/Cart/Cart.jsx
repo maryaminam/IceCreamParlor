@@ -1,11 +1,32 @@
-import React, { useContext } from 'react'
-import './Cart.css'
-import { StoreContext } from '../../Context/StoreContext'
-import { useNavigate } from 'react-router-dom'
+import React, { useContext } from 'react';
+import './Cart.css';
+import { StoreContext } from '../../Context/StoreContext';
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const Cart = () => {
-  const { cartItems, food_list, removeFromCart, getTotalCartAmount, url, token } = useContext(StoreContext) 
-  const navigate = useNavigate()
+  const { cartItems, food_list, removeFromCart, getTotalCartAmount, url, token } = useContext(StoreContext); 
+  const navigate = useNavigate();
+
+  const handleCheckout = () => {
+    if (!token) {
+      Swal.fire({
+        title: 'Login Required',
+        text: 'You must be logged in to proceed to checkout.',
+        icon: 'warning',
+      }).then(() => navigate('/cart'));
+    } else {
+      if (getTotalCartAmount() === 0) {
+        Swal.fire({
+          title: 'Empty Cart',
+          text: 'Your cart is empty. Please add some cookies :)',
+          icon: 'info',
+        });
+      } else {
+        navigate('/order');
+      }
+    }
+  };
 
   return (
     <div className='cart'>
@@ -25,7 +46,7 @@ const Cart = () => {
             return (
               <div key={item._id}>
                 <div className="cart-items-title cart-items-item">
-                  <img src={url + '/images/' + item.image} alt={item.name} />
+                  <img src={`${url}/images/${item.image}`} alt={item.name} />
                   <p>{item.name}</p>
                   <p>Rs. {item.price}</p>
                   <p>{cartItems[item._id]}</p>
@@ -34,7 +55,7 @@ const Cart = () => {
                 </div>
                 <hr />
               </div>
-            )
+            );
           }
           return null;
         })}
@@ -60,17 +81,11 @@ const Cart = () => {
             </div>
           </div>
 
-          {token ? (
-            <button onClick={() => navigate('/order')} className='btn'>Proceed to CheckOut</button>
-          ) : (
-            <div className="login-prompt">
-              <p>Please <span onClick={() => navigate('/login')} className='login-link'>log in</span> to proceed to checkout.</p>
-            </div>
-          )}
+          <button onClick={handleCheckout} className='btn'>Proceed to Checkout</button>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;
